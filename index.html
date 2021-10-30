@@ -4,65 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar using Float</title>
-    <style>
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    <link rel="stylesheet" href="style.css">
+    <title>Maple</title>
 
-#logo{
-    padding: .5rem;
-    float: left;
-}
-
-.menu{
-    float: right;
-}
-.menu li{
-    padding: 2rem;
-    font-size: 1.5rem;
-    display: inline-block;
-}
-.menu li a{
-    color: black;
-}
-.menu li a:hover{
-    color: orangered;
-}
-@media(max-width: 824px){
-    .nav ul{
-        position: fixed;
-        top:80px;
-        left:0;
-        height: 100vh;
-        width:100%;
-        background-color: black;
-        text-align: center;
-    }
-    .nav ul li a{
-        color: white;
-    }
-}
-    </style>
 </head>
 <body>
-    <div class="nav">
-        <div id="logo">
-            <img src="tiger.png" alt="logo" width="80px">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Updates</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
+    <section class="header">
+        <div class="nav">
+            <!-- <div id="logo">
+                <img src="tiger.png" alt="logo" width="80px">
+            </div> -->
+            <h1><a class="logo" href="#">Maple</a></h1>
+            <ul class="menu">
+                <li ><a href="#">Home</a></li>
+                <li ><a href="#">About</a></li>
+                <li ><a href="#">Updates</a></li>
+                <li ><a href="#">Products</a></li>
+                <li ><a href="#">Contact</a></li>
             </ul>
         </div>
-    </div>
+        <h2 class="header_heading">
+            Let Things Go
+        </h2>
+        <p class="header_para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus, porro voluptate in, ipsam quis sit aut ea esse totam blanditiis vel ullam quia recusandae, animi obcaecati illum. Vitae, accusantium?
+        </p>
+        <div class="triangle">
+        </div>
+    </section>
+    <section>
+        <h1 class="quotes_heading">
+            Famous quotes
+        </h1>
+        <div class="about">
+            <div class="container_box">
+                <div class="writer">
+                    <img class="writer" src="https://www.biography.com/.image/ar_8:10%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTgwMzQ0OTY3Mjg0MTM5ODg0/gettyimages-515210692.jpg" alt="">
+                    <p><strong>Robert Browning</strong></p>
+                </div>
+                <p class="quote"><em>Days decrease, and autumn grows, autumn is everything.</em></p>
+            </div>
+            <div class="container_box">
+                <div class="writer">
+                    <img class="writer" src="https://www.bradanpress.com/wp-content/uploads/2020/11/LMM-webres-square.jpeg" alt="">
+                    <p><strong>Lucy Maud Montgomery</strong></p>
+                </div>
+                <p class="quote"><em>Maples are such sociable trees.. They're always rustling and whispering to you.</em></p>
+            </div>
+            <div class="container_box">
+                <div class="writer">
+                    <img class="writer" 
+                    src="https://cdn.britannica.com/07/21107-004-8BBC18D8/Albert-Camus-photograph-Henri-Cartier-Bresson.jpg" alt="">
+                    <p><strong>Albert Camus</strong></p>
+                </div>
+                <p class="quote"><em>Autumn is a second spring when every leaf is a flower.</em> </p>
+            </div>
+        </div>
+        </section>
+    <section class="info_slide">
+        <div class="container">
+            <h3>
+                Maple trees are ancient
+            </h3>
+            <p>
+                According to fossil records, maple trees are actually quite ancient. They date back to at least 100 million years ago, if not even older. These trees were growing when dinosaurs roamed the Earth! Of course, not every species of maple tree survived from that time. But maples belonging to the family Aceraceae existed back then and still today.
+            </p>
+            <a href="https://blog.tentree.com/10-interesting-facts-about-maple-trees/" class="facts_btn">
+                More Facts ->
+            </a>
+        </div>
+    </section>
+    <ul>
+        <li class="band one">
+        </li>
+        <li class="band two">
+        </li>
+        <li class="band three">
+        </li>
+        <li class="band four">
+        </li>
+    </ul>
+    <section class="footer">
+        <div class="box one">
+            <h4>Follow us</h4>
+            <p>Email</p>
+            <p>Twitter</p>
+            <P>Instagram</P>
+            <P>Facebook</P>
+        </div>
+        <div class="box two">
+            <h4>Links</h4>
+            <p>About</p>
+            <p>blog</p>
+            <p>Press Kit</p>
+        </div>
+        <div class="box three">
+            <h4>Learn more</h4>
+            <p>The project</p>
+            <p>About</p>
+        </div>
+        <div class="box four">
+            <h4>Products</h4>
+            <p>Maple Syrup</p>
+            <P>Decoratives</P>
+            <p>Sugar</p>
+        </div>
+        <div class="box five">
+            <h4>Donate</h4>
+            <p>Organise</p>
+            <p>Community</p>
+        </div>
+    </section>
+    <img class="leaf_image a1" src="leaf.png" alt="">
+    <img class="leaf_image a2" src="leaf.png" alt="">
+    <img class="leaf_image a1" src="leaf.png" alt="">
+    <img class="leaf_image a3" src="leaf.png" alt="">
+    <img class="leaf_image a5" src="leaf.png" alt="">
+    <img class="leaf_image a4" src="leaf.png" alt="">
+    <img class="leaf_image a7" src="leaf.png" alt="">
+    <img class="leaf_image a6" src="leaf.png" alt="">
+    <img class="leaf_image a2" src="leaf.png" alt="">
+    <img class="leaf_image a7" src="leaf.png" alt="">
+    <img class="leaf_image a6" src="leaf.png" alt="">
 </body>
+
