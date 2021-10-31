@@ -56,20 +56,33 @@ background-color: #fbe162;
 background-color: #fbe162e5;
 display: flex;
 justify-content: space-between;
+align-items: center;
 }
-.menu{
+.nav_menu{
 display: flex;
 }
-.menu li{
+.nav_item{
 padding: 20px;
 font-size: 2ch;
 }
-.menu li a{
+.nav_link{
 color: black;
 font-family: 'PT Serif', serif;
 }
-.menu li a:hover{
+.nav_link:hover{
 color: #d54603;
+}
+.hamburger{
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
 }
 .triangle{
 width: 0; 
@@ -107,7 +120,7 @@ font-size: 2ch;
     flex-wrap: wrap;
     }
     .writer{
-    height: 300px;
+    height: 45vmin;
     display: flex;
     }
     .writer p strong{
@@ -247,7 +260,62 @@ z-index: -1;
 90%  {left:40px; top:80vh; transform: rotate(380deg);}
 100%  {left:55px; top:90vh; transform: rotate(400deg);}
 }
+@media only screen and (max-width: 1170px) {
+    .header_heading{
+        bottom: 30%;
+    }
+    .header_para{
+        bottom: 6%;
+    }
+    .writer{
+        height: 30vmin;
+    }
+    .container{
+        width: 60%;
+        background-color: #fff;
+        text-align: right;
+        right: 0;
+        margin-top: 8%;
+        border: 4px dashed #332b0c;
+        border-right: none;
+        }
+}
 @media only screen and (max-width: 600px) {
+    .nav_menu {
+        position: fixed;
+        left: -100%;
+        top: 3.5rem;
+        flex-direction: column;
+        background-color: var(--one);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 1000;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav_link{
+        color: var(--five);
+    }
+    .nav_menu.active {
+        left: 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
     .triangle{
         width: 100%;
         height: 70%;
@@ -280,8 +348,8 @@ z-index: -1;
     }
         .container{
         width: 100%;
-        right: inherit;
         text-align: center;
+        border: none;
         background-color: #fff7;
         }
         .facts_btn{
@@ -308,3 +376,11 @@ z-index: -1;
         border-right: none;
         }
     }
+@media only screen and (max-width: 368px) {
+    .writer{
+        height: 35vmin;
+    }
+    .quotes_heading{
+    font-size: 4ch;
+    }
+}
